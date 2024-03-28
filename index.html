@@ -13,10 +13,17 @@
 
 
       function HomePage() {
+        const options = ['good morning', 'good afternoon', 'good evening', 'good night'];
         return (
           <div>
             <Greet name="React"/>
-            <Greet/>
+              {
+                options.map((option) => (
+                <h1>
+                  {option}
+                </h1>
+                ))
+              }
           </div>
         );
       }
