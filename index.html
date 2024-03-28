@@ -5,9 +5,25 @@
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/jsx">
+
+
+      function Greet({name}) {
+        return <h1> Hello {name ?  name : `user`}!</h1>;
+      }
+
+
+      function HomePage() {
+        return (
+          <div>
+            <Greet name="React"/>
+            <Greet/>
+          </div>
+        );
+      }
+
       const app = document.getElementById('app');
       const root = ReactDOM.createRoot(app);
-      root.render(<h1>i just realised nextjs is not a react competitor but an enhancer :sob: :sob: :sob:</h1>);
+      root.render(<HomePage/>);
     </script>
   </body>
 </html>
