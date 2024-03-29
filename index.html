@@ -12,7 +12,13 @@
       }
 
 
+      
       function HomePage() {
+        const [clicks, setClicks] = React.useState(0);
+
+        React.useEffect(()=> {
+          alert(`You have clicked ${clicks} number of times!`)
+        })
         const options = ['good morning', 'good afternoon', 'good evening', 'good night'];
         return (
           <div>
@@ -24,6 +30,9 @@
                 </h1>
                 ))
               }
+            <button onClick={()=> setClicks(clicks+1)} disabled={ clicks >= 3}>
+              total clicks - {clicks}
+            </button>
           </div>
         );
       }
