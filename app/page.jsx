@@ -18,7 +18,6 @@ export default function HomePage() {
       {options.map((option) => (
         <h1>{option}</h1>
       ))}
-      <Clicks />
       <Clicks/>
     </div>
   );

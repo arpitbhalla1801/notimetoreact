@@ -8,8 +8,12 @@ export default function Clicks() {
     });
     const [clicks, setClicks] = useState(0);
 
-    
-    return <button onClick={() => setClicks(clicks + 1)} disabled={clicks >= 3}>
+    return <div>
+        <button onClick={() => setClicks(clicks + 1)} disabled={clicks >= 3}>
         total clicks - {clicks}
-      </button>
+        </button>
+        <button onClick={() => setClicks(clicks + 1)} disabled={clicks >= 3}>
+        total clicks - {clicks}
+        </button>
+    </div>
 }
